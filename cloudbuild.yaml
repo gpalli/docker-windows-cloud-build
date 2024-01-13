@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/$PROJECT_ID/windows-build'
+  script: |
+    docker build -t gcr.io/$PROJECT_ID/buildtools:ltsc2022 -m 2GB .
+    docker push gcr.io/$PROJECT_ID/buildtools:ltsc2022
+  automapSubstitutions: true
